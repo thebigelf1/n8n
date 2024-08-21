@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: n8n
+    env: node
+    plan: starter
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    nodeVersion: 18.17.1
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.1
+      - key: N8N_PORT
+        value: 3000
+      - key: PORT
+        value: 3000
